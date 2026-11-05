@@ -14,8 +14,8 @@ There are two parts:
 - **`scroll/`**: the layout itself (crate `scroll-layout`). It's one file of plain Rust with no
   dependencies, and it only does the arithmetic: which window goes where, given the screen and
   what the person asked for. A compositor feeds it windows and actions and reads back rectangles.
-  This is the part meant for Ada's compositor; see
-  [`~/Design/ada-notes/scrolling-tiling.md`](../ada-notes/scrolling-tiling.md).
+  This is the part meant for Ada's compositor: [`scroll/src/lib.rs`](scroll/src/lib.rs) goes in
+  as one module, and its tests are in [`scroll/tests/strip.rs`](scroll/tests/strip.rs).
 - **`scrollvil/`**: a small Wayland compositor built on Smithay 0.7, the same version Ada's
   compositor uses, that runs as a window on the desktop and tiles the apps opened inside it with
   that layout. It's how you can use the layout today, and it shows the layout working with real
@@ -24,6 +24,8 @@ There are two parts:
 ## Running Scrollvil
 
 ```sh
+git clone https://github.com/Officialbabs/ada-scroll.git
+cd ada-scroll
 ./install.sh
 ```
 
@@ -135,4 +137,4 @@ from either (both are GPL-3.0).
 
 ## Licence
 
-MIT.
+MIT; see [LICENSE](LICENSE).

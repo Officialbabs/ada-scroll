@@ -1,0 +1,8 @@
+[package]
+name = "scroll-layout"
+version = "0.1.0"
+edition = "2021"
+description = "A scrolling layout for Wayland compositors: columns on a strip wider than the screen"
+license = "MIT"
+
+[dependencies]

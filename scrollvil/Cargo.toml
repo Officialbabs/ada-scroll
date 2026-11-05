@@ -1,0 +1,18 @@
+[package]
+name = "scrollvil"
+version = "0.1.0"
+edition = "2021"
+description = "A small nested Wayland compositor that tiles windows with scroll-layout"
+license = "MIT"
+
+[dependencies]
+scroll-layout = { path = "../scroll" }
+tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
+tracing = "0.1"
+png = "0.17"
+
+[dependencies.smithay]
+# The version Ada's compositor vendors.
+version = "=0.7.0"
+default-features = false
+features = ["backend_winit", "wayland_frontend", "desktop", "renderer_gl"]
